@@ -1,13 +1,18 @@
-# License Plate Segmentation and OCR
+# Vehicle Number Plate Recognition
 
-This MATLAB code performs license plate segmentation and Optical Character Recognition (OCR) on a license plate image. The code applies various image processing techniques—including contrast enhancement, noise reduction, edge detection, morphological operations, and binary cleanup—to isolate the license plate region. Finally, OCR is used to extract text from the plate.
+This MATLAB code performs vehicle number plate reconition from the rear-view images. The application applies various image processing techniques—including contrast enhancement, noise reduction, edge detection, morphological operations,binary cleanup and OCR—to isolate the license plate region and extract text from the number plate.
 
 ## Overview
+Name: Junseo Hwang
 
-The project consists of the following main steps:
+CID: 01710707
+
+- The project was conducted individually - all the work is done on my own
+- It consists of the following main steps:
 
 ### 1. **Image Preprocessing:**  
    - Load the image and convert it to grayscale.
+   - Insert any number from 1 to 20 to test out different images.
      
 ![image](https://github.com/user-attachments/assets/f3d0df7e-157f-44fb-805e-da9472eaa39c)
 
@@ -57,3 +62,8 @@ The project consists of the following main steps:
 
 ![image](https://github.com/user-attachments/assets/a28aa4b5-f158-4009-a396-6f533c975f99)
 
+## Evaluation
+In most cases, the application was able to successfully recognise the license plate numbers from their original images. It was able to process the image by enhancing contrasts and adding filters prior to edge detection, and identify the license plate. However, there were also some weaknesses found in this applicaion. The parameters are set to specific values customised for the sample images, meaning that the application may not be as effective in other conditions. THe code also assumes the largest candidate as the license plate, so it may cause errors in more complex images or with multiple similar regions.
+
+## Reflection
+In this project, I was able to deepen my understanding in image processing technologies and test out the practical application myself doing the tasks. I learned how to implement the skills learned from the lab sessions, such as contrast enhancement, noise reduction, edge detection, and various morphological operations to isolate license plates from complex backgrounds. My design decisions were mainly based on trial and error, by testing out different methods and parameters, for example comparing canny, sobel and log methods for edge detection. If I was able to invest more into this project, I would explore adaptive thresholding methods so that the application chooses sufficient value for the parameters for each image, and applying neural network or machine learning models to improve the accuracy.
